@@ -1,0 +1,64 @@
+<nav class="navbar navbar-default" role="navigation">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#"><img src="/images/logotype145x21px.png"></a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav navbar-right">
+            <li class="active"><a href="#">Planes</a></li>
+            <li><a href="#">Pricing</a></li>
+            <li><a href="#">Travel</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="/keystone">Sign In</a></li>
+        </ul>
+    </div><!-- /.navbar-collapse -->
+</nav>
+<div class="jumbotron main-title">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <div class="center">
+                    <h3 class="main-title">When fears are grounded dreams take flight!</h3>
+                </div>
+                <div class="center">
+                    <img src="/images/plane-body601x225px.png" id="imagebody">
+                    <img src="/images/vrtule162x162px.png" id="image">
+                    <script>rotateAnimation("image",30);</script>
+                </div>
+                <div class="center">
+                    <button class="superbutton" id="superbutton">Explore</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+<div class="chevron" ></div>
+{{#if cities}}
+<div class="container cities">
+    <div class="row">
+		{{#each cities}}
+        <div class="col-sm-3 col-xs-6"><img src="{{#if this.source}}{{this.source}}{{else}}{{this.image.url}}{{/if}}"><div class="city">{{this.name}}</div></div>
+		{{/each }}
+    </div>
+</div>
+<hr>
+{{/if}}
+<div class="row" id="auth">
+    <div class="col-md-8 col-md-offset-2 center">
+        <h2 class="auth-title">Less Email. Share between teams</h2>
+        <div class="auth-subtitle">We aim to make you and communications more pleasant and more productive.</div>
+        <div class="auth-buttons">
+            <form class="form-inline" role="form" method="POST"><button type="button" class="btn btn-primary btn-md">Sign up using Google</button>&nbsp;&nbsp;&nbsp;OR&nbsp;&nbsp;&nbsp;<input type="email" class="form-control" id="email" name="email" placeholder="Your work email">&nbsp;&nbsp;&nbsp;<button type="submit" class="btn btn-primary btn-md">Sign up</button></form>
+			{{> flash }}
+		</div>
+    </div>
+</div>
