@@ -35,3 +35,14 @@ jspm_packages
 
 # Optional REPL history
 .node_repl_history
+
+
+#idea in webstorm
+.idea
+.idea/SkyTravel.iml
+.idea/jsLibraryMappings.xml
+.idea/libraries/
+.idea/misc.xml
+.idea/modules.xml
+.idea/vcs.xml
+.idea/workspace.xml
